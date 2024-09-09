@@ -16,7 +16,7 @@ function App() {
  // Answer :-
   // const addValue =() =>{
   //   console.log("Clicked "+counter)
-  //   if(counter<=20){
+  //   if(counter<20){
   //   // counter = counter+1; now we don't need to use this as we are using hooks such as useStates 
   //   counter = counter +1
   //   setCounter(counter)
