@@ -34,7 +34,7 @@ function App() {
     passwordRef.current?.select();
     passwordRef.current?.setSelectionRange(0,101) // if you wan to select till variable 101
     window.navigator.clipboard.writeText(password)
-  },[password])
+ },[password])
 
   // useEffect that reacts to changes in the dependencies (length, numberAllowed, charAllowed, passwordGenerator)
   useEffect(() => {
