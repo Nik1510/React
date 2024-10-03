@@ -5,7 +5,7 @@ import { useTodo } from '../Context/TodoContext'
 function TodoForm() {
     
     const [todo, setTodo] = useState("")
-    const {addTodo} = useTodo()
+    const {addTodo} = useTodo() // here we use use the useTodo hook to access the addTodo function from your context.
 
     const add =(e)=>{
         e.preventDefault()
@@ -14,6 +14,12 @@ function TodoForm() {
         addTodo({ todo, completed :false})
         setTodo("")
     }
+    /*
+    add is a function that handles the form submission.
+e.preventDefault() prevents the default form submission behavior.
+The function checks if todo is empty. If it is, the function returns early and does nothing.
+If todo is not empty, it calls addTodo with a new todo object containing the current todo value and completed: false.
+Finally, it resets the todo state to an empty string.*/
 
     return (
         <form onSubmit={add} className="flex">
